@@ -1,0 +1,35 @@
+body{
+    background-image: linear-gradient(#006aac, #03a1c0);
+}
+
+/*CONTAINER*/
+.container{
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/*ROW*/
+.row{
+    background-color: white;
+}
+
+/*CAIXA TITULO*/
+.caixa_titulo{
+    border: solid 1px lightgray;
+    font-size: 20px;
+}
+
+/*CAIXA CONTEUDO*/
+.caixa_conteudo{
+    border: solid 1px lightgray;
+    font-size: 20px;
+    height: 300px;
+}
+
+/*CAIXA FORMULARIO*/
+.caixa_formulario{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
