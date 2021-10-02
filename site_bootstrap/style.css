@@ -1,0 +1,38 @@
+.container-fluid{
+    padding: 0px;
+}
+
+.row{
+    --bs-gutter-x: 0rem;
+}
+
+.sessao_cinza{
+    background-color: #f7f7f7;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.sessao_colorida{
+    background-color: lightpink;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.caixa_servico{
+    margin: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.btn-primary{
+    background-color: salmon;
+    border: solid 1px pink;
+}
+
+.btn-primary:hover{
+    background-color: salmon;
+    border: solid 1px pink;
+    opacity: 80%;
+}
