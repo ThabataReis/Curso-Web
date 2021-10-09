@@ -1,0 +1,57 @@
+.sessao_fundo{
+   background-color: lightgrey;
+   padding: 10px;
+}
+
+.div_qualifi{
+    border: solid 2px rgb(88, 88, 88);
+    background-color: rgb(146, 147, 150);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.caixa_arine{
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.caixa_heitor{
+    text-align: right;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px){
+
+    .caixa_arine{
+        text-align: center;
+        display: none;
+    }
+
+    .caixa_heitor{
+        text-align: center;
+    }
+}
+
+/*DISPLAY: NONE (É O QUE DESAPARECE)*/
+
+.btn-outline-success{
+    background-color: lightpink;
+    border: solid 1px lightsalmon;
+    color: rgb(88, 88, 88);
+}
+
+
+.btn-outline-success:hover{
+    background-color: lightpink;
+    border: solid 1px lightsalmon;
+    opacity: 80%;
+}
+
+/* MUDAR A COR QUANDO SELECIONA COM O MOUSE */
+.div_botao:hover{
+    background-color: pink;
+}
