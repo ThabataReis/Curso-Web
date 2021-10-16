@@ -1,0 +1,19 @@
+th:first-child, td:first-child
+{
+    position:sticky;
+    left:0px;
+    background-color: cadetblue !important;
+}
+
+.btn-primary{
+    background-color: rgb(126, 195, 197);
+    border: solid 1px rgb(17, 104, 107);
+    color: black;
+}
+
+.btn-primary:hover{
+    background-color: rgb(126, 195, 197);
+    border: solid 1px rgb(17, 104, 107);
+    color: black;
+    opacity: 80%;
+}
