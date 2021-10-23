@@ -1,0 +1,27 @@
+.banner_padrao{
+
+    height: 480px !important;
+    object-fit: fill;
+
+}
+
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    left: 0% !important;
+    bottom: 0% !important;
+
+}
+
+.btn-primary{
+    background-color: rgb(83, 179, 182);
+    border: solid 1px rgb(17, 104, 107);
+    color: black;
+}
+
+.btn-primary:hover{
+    background-color: rgb(67, 165, 168);
+    border: solid 1px rgb(17, 104, 107);
+    color: black;
+    opacity: 80%;
+}
