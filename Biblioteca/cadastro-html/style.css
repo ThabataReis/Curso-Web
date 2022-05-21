@@ -1,0 +1,45 @@
+/*DIV BLACK*/ 
+.div_black{
+    width: 700px; 
+    height: 900px; 
+    border: solid 4px black;
+    padding: 10px;
+    background-color: rgb(245, 236, 236);
+}
+
+/*DIV BLUE*/
+.div_blue{
+    width: 690px; 
+    height: 80px; 
+    border: solid 4px rgb(10, 92, 88);
+    color: rgb(10, 92, 88);
+    text-align: center;
+    line-height: 80px;
+    margin: 0 auto;
+    font-size: 40px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+/*TABLE*/
+table{
+    border: solid 4px rgb(10, 92, 88);
+    margin: 0 auto;
+    padding: 20px;
+    width: 690px;
+    background-color: thistle;
+}
+
+/*TH*/
+th{
+    border-top: solid 3px violet;
+    border-bottom: solid 3px violet;
+    padding: 10px;
+}
+
+/*TD*/
+td{
+    border-left: solid 3px violet;
+    border-right: solid 3px violet;
+    padding: 10px;
+}

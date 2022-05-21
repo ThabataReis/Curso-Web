@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html  lang =" pt-br ">
+<cabeça>
+    <meta  charset =" UTF-8 ">
+    <meta  http-equiv = " Conteúdo compatível com X-UA "="IE=edge">
+    <meta  name =" viewport " content =" largura=largura do dispositivo, escala inicial=1.0 ">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title> Formulário</title>
+
+    <!--CHAMADO PAGINA STYLE.CSS-->
+    <link  rel =" folha de estilo " href =" style.css " >
+
+     <!--CHAMANDO FOTN INCRÍVEL-->
+     <script  src =" https://kit.fontawesome.com/365168cdc3.js " crossorigin =" anônimo " > </script>
+
+</cabeça>
+
+<body>
+<form action="/formulario.html" target="_blank" method="get">
+
+ 
+    <!--ABRE TABLE-->
+    <tabela>
+        
+    <tr >
+      <td>  <i  class =" fas fa-user " > </i >
+        Nome: </td >
+      <td> <input  type =" text "   placeholder =" TEXT " > </td >
+    </tr >
+    <br><br>
+
+    <tr >
+      <td>  <i class =" fas fa-baby " > </i > Nascimento: </td >
+      <td>   <input  type =" date " placeholder="00/00/0000" >  </td >
+    </tr >
+    <br><br>
+
+    <tr >
+        <td>  <i  class =" fas fa-address-card " > </i > RG: </td >
+        <td>  <input  type =" number " placeholder =" 00.000.000-0 " >  </td >
+      </tr >
+      <br><br>
+
+      <tr >
+        <td>  <i  class =" fas fa-address-card " > </i > CPF: </td >
+        <td>  <input  type =" number " placeholder =" 000.000.000-00 " >  </td >
+      </tr >
+      <br><br>
+
+      <tr>
+        <td>  <i  class =" fas fa-phone-alt" > </i > Telefone: </td >
+            <td>  <input  type =" number " placeholder ="(00)00000-0000" >  </td >
+          </tr> 
+          <br><br>
+
+
+    <tr >
+      <td>  <i  class =" fas fa-envelope-open-text " > </i > E-mail: </td >
+      <td>  <input  type =" email " placeholder =" EMAIL " > </td>
+    </tr >
+    <br><br>
+
+    <label for="cep"><i class="fa fa-map-marker" aria-hidden="true"></i>CEP</label>
+		<input id="cep" type="text" required/> <br><br>
+<label for="logradouro">Logradouro</label>
+		<input id="logradouro" type="text" required/>
+<label for="numero">Número</label>
+		<input id="numero" type="text" /><br><br>
+<label for="bairro">Bairro</label>
+		<input id="bairro" type="text" required/>
+<label for="uf">Estado</label>
+		<select id="uf">
+			<option value="AC">Acre</option>
+			<option value="AL">Alagoas</option>
+			<option value="AP">Amapá</option>
+			<option value="AM">Amazonas</option>
+			<option value="BA">Bahia</option>
+			<option value="CE">Ceará</option>
+			<option value="DF">Distrito Federal</option>
+			<option value="ES">Espírito Santo</option>
+			<option value="GO">Goiás</option>
+			<option value="MA">Maranhão</option>
+			<option value="MT">Mato Grosso</option>
+			<option value="MS">Mato Grosso do Sul</option>
+			<option value="MG">Minas Gerais</option>
+			<option value="PA">Pará</option>
+			<option value="PB">Paraíba</option>
+			<option value="PR">Paraná</option>
+			<option value="PE">Pernambuco</option>
+			<option value="PI">Piauí</option>
+			<option value="RJ">Rio de Janeiro</option>
+			<option value="RN">Rio Grande do Norte</option>
+			<option value="RS">Rio Grande do Sul</option>
+			<option value="RO">Rondônia</option>
+			<option value="RR">Roraima</option>
+			<option value="SC">Santa Catarina</option>
+			<option value="SP">São Paulo</option>
+			<option value="SE">Sergipe</option>
+			<option value="TO">Tocantins</option>
+		</select>
+        <br><br>
+
+    <tr >
+      <td>  <i  class =" fas fa-sign-in-alt " > </i > Login: </td >
+      <td>   <input  type =" text " placeholder =" TEXT " >  </td >
+    </tr >
+    <br><br>
+
+    <tr >
+      <td>  <i  class =" fas fa-key " > </i > Senha: </td >
+      <td>   <input  type =" senha " placeholder =" SENHA " > </td >
+    </tr >
+    <br><br>
+
+    <tr >
+      <td>  <i  class ="  fa fa-camera-retro" > </i > Foto: </td >
+      <td>   <input  type =" arquivo " > </td >
+        <button type="submit" form_id="arquivo">Enviar</button>
+    </tr >
+    <br><br>
+
+    <tr>
+        <td><i class="fa fa-check" aria-hidden="true"></i> Comprovante de Endereço:</label></td>
+        <td> <input type="arquivo" id="arquivo"></td>
+        <button type="submit" form_id="arquivo">Enviar</button>
+    </tr>
+    <br><br>
+  
+        <button type="submit" form_id="arquivo">Enviar</button>
+
+
+  </tabela >
+  <!--TABELA FECHA-->
+</div>
+</form>
+
+</body>
+</html>
+
+<script type="text/javascript">
+     $( "#cpf" ).keypress(function() {
+        $(this).mask('000.000.000-00');
+
+    });
+    $( "#tel" ).keypress(function() {
+        $(this).mask('(00)00000-0000');
+    });
+
+	$("#cep").focusout(function(){
+	//Aqui vai o código		
+	});
+</script>
