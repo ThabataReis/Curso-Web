@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Register</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+     <!-- Adicionando Javascript -->
+     <script>
+    
+        function limpa_formulário_cep() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua').value=("");
+                document.getElementById('bairro').value=("");
+                document.getElementById('cidade').value=("");
+                document.getElementById('uf').value=("")
+        }
+    
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('uf').value=(conteudo.uf);
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep(valor) {
+    
+            //Nova variável "cep" somente com dígitos.
+            var cep = valor.replace(/\D/g, '');
+    
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+    
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+    
+                //Valida o formato do CEP.
+                if(validacep.test(cep)) {
+    
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua').value="...";
+                    document.getElementById('bairro').value="...";
+                    document.getElementById('cidade').value="...";
+                    document.getElementById('uf').value="...";
+    
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+    
+                    //Sincroniza com o callback.
+                    script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+    
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+    
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        };
+    
+        </script>
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Crie sua Conta!</h1>
+                            </div>
+                            <form class="user">
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <b>Nome</b>
+                                        <input type="text" class="form-control form-control-user" id="Name">                                            
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <b>Sobrenome</b>
+                                        <input type="text" class="form-control form-control-user" id="LastName">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <b>Data de Nascimento</b>
+                                        <input type="date" class="form-control form-control-user" id="date">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <b>Sexo</b>
+                                        <select class="form-control form-control-user" name="cars" id="cars" form="carform">
+                                            <option value="volvo">Feminino</option>
+                                            <option value="saab">Masculino</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <form class="user">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <b>Celular</b>
+                                            <input type="text" class="form-control form-control-user" id="celular"
+                                            placeholder="(00)00000-0000">
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <b>CPF</b>
+                                            <input type="text" class="form-control form-control-user" id="cpf"
+                                            placeholder="000.000.000-00">
+                                        </div>
+                                    </div>
+                                                                            
+                                <div class="form-group">
+                                   <b>Email</b>
+                                    <input type="email" class="form-control form-control-user" id="Email">
+                                </div>
+                              
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <b>Senha</b>
+                                        <input type="password" class="form-control form-control-user">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <b>Repetir Senha</b>
+                                        <input type="password" class="form-control form-control-user">
+                                    </div>
+                                </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label><b>CEP</b>
+                                            <input  type="text"  class="form-control form-control-user" id="cep"
+                                            placeholder="00.000-000"  onblur="pesquisacep(this.value);" /></label>
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <b>Estado</b>
+                                            <select class="form-control form-control-user" id="uf">
+                                                <option value="AC">Acre</option>
+                                                <option value="AL">Alagoas</option>
+                                                <option value="AP">Amapá</option>
+                                                <option value="AM">Amazonas</option>
+                                                <option value="BA">Bahia</option>
+                                                <option value="CE">Ceará</option>
+                                                <option value="DF">Distrito Federal</option>
+                                                <option value="ES">Espírito Santo</option>
+                                                <option value="GO">Goiás</option>
+                                                <option value="MA">Maranhão</option>
+                                                <option value="MT">Mato Grosso</option>
+                                                <option value="MS">Mato Grosso do Sul</option>
+                                                <option value="MG">Minas Gerais</option>
+                                                <option value="PA">Pará</option>
+                                                <option value="PB">Paraíba</option>
+                                                <option value="PR">Paraná</option>
+                                                <option value="PE">Pernambuco</option>
+                                                <option value="PI">Piauí</option>
+                                                <option value="RJ">Rio de Janeiro</option>
+                                                <option value="RN">Rio Grande do Norte</option>
+                                                <option value="RS">Rio Grande do Sul</option>
+                                                <option value="RO">Rondônia</option>
+                                                <option value="RR">Roraima</option>
+                                                <option value="SC">Santa Catarina</option>
+                                                <option value="SP">São Paulo</option>
+                                                <option value="SE">Sergipe</option>
+                                                <option value="TO">Tocantins</option>
+                                            </select>
+                                        </div>  
+                                    </div>                         
+                                
+                                    <div class="form-group row">
+                                        <div class="col-sm-8 mb-3 mb-sm-0">
+                                           <b> Rua</b>
+                                            <input type="text" class="form-control form-control-user" id="rua">
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <b>Número</b>
+                                            <input type="text" class="form-control form-control-user" id="numero">
+                                        </div>
+                                    </div>
+                                       
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <b>Bairro</b>
+                                                <input type="text" class="form-control form-control-user" id="bairro">
+                                            </div>
+                                            <div class="col-sm-6">
+                                              <b>  Cidade</b>
+                                                <input type="text" class="form-control form-control-user" id="cidade">
+                                            </div>
+                                        </div>   
+          
+                                        <div class="form-group">
+                                            <b> Palavra de Segurança</b>
+                                            <input type="text" class="form-control form-control-user" id="exampleseguranca">
+                                        </div>
+                                    
+
+                                </div>
+                                <a href="login.html" class="btn btn-primary btn-user btn-block">
+                                    Registrar conta
+                                </a>
+                                
+                               
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="forgot-password.html">Esqueceu a senha?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="login.html">Já possue conta? Entrar!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>
